@@ -1,0 +1,393 @@
+// Options
+//$enable-negative-margins: true;
+$enable-dark-mode: false;
+$enable-important-utilities: false;
+$enable-cssgrid: false;
+$enable-negative-margins: true;
+$enable-rfs: false;
+
+// Reset Browser defaults
+* {
+  margin-block-start: 0; 
+  margin-block-end: 0; 
+  margin-inline-start: 0; 
+  margin-inline-end: 0;
+  padding-block-start: 0; 
+  padding-block-end: 0; 
+  padding-inline-start: 0; 
+  padding-inline-end: 0;
+}
+
+// prefix
+$prefix: bs-;
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #333333;
+$gray-900: #444444;
+$black: #000;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: ("100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+  "1000": $black,
+);
+// scss-docs-end gray-colors-map test
+// fusv-enable
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+// calculator for px to rem -> https://www.ninjaunits.com/converters/pixels/pixels-rem/
+
+$spacer: 1rem;
+$spacers: (0: 0,
+  1: $spacer * .0625,
+  2: $spacer * .125,
+  3: $spacer * .1875,
+  4: $spacer * .25,
+  5: $spacer * .3125,
+  6: $spacer * .375,
+  7: $spacer * .4375,
+  8: $spacer * .5,
+  9: $spacer * .5625,
+  10: $spacer * .625,
+  //11: $spacer * .6875,
+  12: $spacer * .75,
+  13: $spacer * .8125,
+  //14: $spacer * .875,
+  15: $spacer * .9375,
+  16: $spacer,
+  //17: $spacer * 1.0625,
+  18: $spacer * 1.125,
+  //19: $spacer * 1.1875,
+  20: $spacer * 1.25,
+  //21: $spacer * 1.3125,
+  //22: $spacer * 1.375,
+  //23: $spacer * 1.4375,
+  24: $spacer * 1.5,
+  25: $spacer * 1.5625,
+  30: $spacer * 1.875,
+  35: $spacer * 2.1875,
+  36: $spacer * 2.25,
+  40: $spacer * 2.5,
+  45: $spacer * 2.8125,
+  50: $spacer * 3.125,
+  60: $spacer * 3.75,
+  70: $spacer * 4.375,
+  80: $spacer * 5,
+  100: $spacer * 6.250,
+  200: $spacer * 12.5,
+  //1000: $spacer * 62.50,
+);
+
+$grid-gutter-width: 0;
+
+// Guttermap usage == g-0
+$gutters: (0: 0,
+  1: $spacer * .0625,
+  2: $spacer * .125,
+  3: $spacer * .1875,
+  4: $spacer * .25,
+  5: $spacer * .3125,
+  10: $spacer * .625,
+  15: $spacer * .9375,
+  20: $spacer * 1.25,
+  25: $spacer * 1.5625,
+  30: $spacer * 1.875,
+  35: $spacer * 2.1875,
+  40: $spacer * 2.5,
+  50: $spacer * 3.125,
+);
+
+// Fluid_styled_content variables - used in _FluidStyledContent.scss
+$styles-content-textmedia-textMargin: ($spacer * 1.875);
+$styles-content-textmedia-columnSpacing: ($spacer * .625);
+$styles-content-textmedia-rowSpacing: ($spacer * .0625);
+$space-between-text-image: ($spacer * .625);
+$space-ce-frame: ($spacer * 1.875);
+$styles-content-textmedia-textMarginResponsive: (0);
+//$styles-content-textmedia-ce-gallerySingleImageWidth: (50%);
+$styles-content-textmedia-ce-galleryMultiImageWidthInText: (50%);
+$styles-content-textmedia-ce-galleryMultiImageWidth: (100%);
+// end
+
+// Breadcrumb
+$breadcrumb-divider: quote(">");
+
+// Typography
+$font-style-normal: normal;
+
+// Fonthandling
+$font-family-sans-serif: 'Roboto'; 
+$font-family-base: 'Roboto';
+
+// Line Height
+$line-height-base: 1.4;
+$line-height: 1;
+$line-height-lg: 1.6;
+$line-height-sm: 1.2;
+$input-line-height: 1.4;
+
+/*Fontsizes with css clamp function is rendered direct in the Browser - fluid-typography
+  See:
+  https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjQ4MHB4IiwibWF4V2lkdGgiOiI5OTJweCIsIm1pbkZvbnRTaXplIjoiMTRweCIsIm1heEZvbnRTaXplIjoiMTZweCJ9
+  https://royalfig.github.io/fluid-typography-calculator/
+  https://modern-fluid-typography.vercel.app/
+*/
+
+$font-size-base: clamp(0.875rem, calc(0.7578rem + 0.3906vw), 1rem);
+$font-size-sm: clamp(0.75rem, calc(0.6328rem + 0.3906vw), 0.875rem);
+$font-size-lg: clamp(1rem, calc(0.7656rem + 0.7813vw), 1.25rem);
+$font-size-xlg: clamp(1.125rem, calc(0.8906rem + 0.7813vw), 1.375rem);
+
+$navbar-brand-font-size: clamp(1rem, calc(0.7656rem + 0.7813vw), 1.25rem);
+$font-size-nav: clamp(1rem, calc(0.8828rem + 0.3906vw), 1.125rem);
+$font-size-tabtoacc: clamp(1.25rem, calc(0.8828rem + 0.3906vw), 1.5rem);
+/*$font-size-nav-xl: $font-size-base * .9375;*/
+$font-size-nav-sub: clamp(0.875rem, calc(0.7578rem + 0.3906vw), 1rem);
+$nav-link-height: clamp(0.875rem, calc(2.266vw + 0.195rem), 1.6rem);
+$navbar-brand-height: $line-height-base;
+$navbar-brand-padding-y: 0;
+
+$lead-font-size: clamp(0.875rem, calc(0.5234rem + 1.1719vw), 1.25rem);
+$lead-font-weight: 400;
+
+//$h1-font-size: $font-size-base * 2.5;
+$h1-font-size: clamp(1.5rem, calc(0.5rem + 3.3333333333333335vw), 3rem);
+$h2-font-size: clamp(1.25rem, calc(-0.07rem + 3.41vw), 1.875rem);
+$h3-font-size: clamp(1.125rem, calc(1.0156rem + 0.7813vw), 1.5rem);
+$h4-font-size: clamp(1.125rem, calc(1.0078rem + 0.3906vw), 1.25rem);
+$h5-font-size: clamp(1rem, calc(0.883rem + 0.391vw), 1.25rem);
+$h6-font-size: clamp(1rem, calc(0.8828rem + 0.3906vw), 1.125rem);
+
+//font-sizes overwrite default vars from  default _variables
+$input-btn-font-size: clamp(0.875rem, calc(0.7578rem + 0.3906vw), 1rem);
+$btn-font-size: clamp(0.875rem, calc(0.7578rem + 0.3906vw), 1rem); 
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+  );
+  /*12: $font-size-base * .75,
+  14: $font-size-base * .875,
+  17: 1.0625rem,
+  18: $font-size-base * 1.125,
+  32: $font-size-base * 2,
+  50: $font-size-base * 3.125,
+  80: $font-size-base * 5);
+
+$font-sizes: (
+   1: clamp(0.5rem, 2vw, 1rem),
+   2: clamp(1.2rem, 2.5vw, 1.6rem),
+   3: clamp(1.5rem, 3vw, 2.0rem),
+   4: clamp(1.8rem, 3.5vw, 2.4rem),
+   5: clamp(2.2rem, 4vw, 2.8rem),
+   6: clamp(2.6rem, 4.5vw, 3.2rem),
+ );*/
+
+
+//$font-size-blockquotes: 2rem;
+//$blockquote-font-size: $font-size-base;
+
+$font-size-icon: $font-size-xlg;
+$list-inline-padding: 0;
+
+
+// headings-variables
+$headings-margin-bottom: $spacer;
+$headings-font-family: 'Roboto';
+$headings-font-weight: 700;
+$headings-line-height: $line-height;
+$headings-color: $gray-900;
+$headings-font-weight-light: 500;
+$headings-margin-bottom: clamp(0.313rem, calc(-0.2565rem + 2.4298vw), 1.25rem);
+$headings-font-family: 'Roboto';
+$headings-font-style: null;
+$headings-font-weight: 700;
+$headings-line-height: 1;
+$headings-color: inherit;
+
+$blockquote-font-size: clamp(1.125rem, calc(1.0078rem + 0.3906vw), 1.25rem);
+
+$display-font-weight: $headings-font-weight-light;
+$display-line-height: $headings-line-height;
+
+// Mark
+$mark-padding: 0;
+$mark-bg: none;
+$mark-color: $primary;
+
+// Links Style anchor elements.
+$link-color: $primary;
+$link-decoration: none;
+$link-shade-percentage: 15%;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
+$link-hover-decoration: underline;
+
+// border
+$border-color: $gray-900;
+$input-border-color: $gray-300;
+
+$border-radius-xxl: null;
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) ;
+
+// container-max-widths
+$container-max-widths: (sm: 540px,
+  md: 620px,
+  lg: 920px,
+  xl: 1320px
+  );
+
+// Carousel
+$carousel-indicator-width: 1.875rem;
+$carousel-indicator-height: .25rem;
+$carousel-indicator-opacity: 0.9;
+$carousel-indicator-active-bg: $white;
+
+$carousel-control-color: $white;
+$carousel-control-icon-width: 3rem;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !default;
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
+
+// Jumbotron
+// $jumbotron-bg: $white ;
+
+// Paragraphs/ Lead
+$paragraph-margin-bottom: 0;
+
+p {
+  text-wrap: pretty;
+}
+
+
+// position-map
+$position-values: (0: 0,
+  50: 50%,
+  60: 60%,
+  100: 100%);
+
+// Card
+$card-height: 100%;
+$card-cap-bg: $white;
+$card-border-color: var(--#{$prefix}primary);
+
+// Tabs
+$nav-tabs-border-color: $primary;
+$nav-tabs-link-hover-border-color: $primary $primary $nav-tabs-border-color;
+$nav-tabs-link-active-color: $primary;
+$nav-tabs-link-active-border-color: $nav-tabs-link-active-color  $nav-tabs-link-active-color  $white $nav-tabs-link-active-color ;
+$nav-link-color: $link-color;
+$nav-link-hover-color: $link-color;
+
+$component-active-color: $white;
+$component-active-bg: $primary;
+$nav-pills-link-active-color: $component-active-color;
+$nav-pills-link-active-bg: $component-active-bg;
+
+// scss-docs-start list-group-variables
+$list-group-border-color: $gray-900;
+
+// Navbar
+$navbar-padding-y: 0;
+$navbar-toggler-focus-width: 0;
+$navbar-light-toggler-border-color: rgba($black, .0);
+
+// Badges
+$badge-font-size: clamp(0.75rem, calc(0.6328rem + 0.3906vw), 0.875rem);
+$badge-font-weight: $font-style-normal;
+$badge-color: $white;
+$badge-padding-x: .625rem;
+$badge-padding-y: .3125rem;
+$badge-border-radius: var(--#{$prefix}border-radius);
+
+// Caret
+$caret-width: .4rem;
+$caret-vertical-align: 0;
+
+// Transition tabs & accordion
+$transition-fade: opacity .35s linear;
+$transition-collapse: height .8s ease;
+
+// Accordion
+$accordion-button-active-bg: $primary;
+$accordion-button-active-color: $white;
+$accordion-padding-y: 0.75rem;
+$accordion-padding-x: 1.25rem;
+$accordion-button-padding-y: $accordion-padding-y;
+$accordion-button-padding-x: $accordion-padding-x;
+$accordion-icon-width: 1.25rem;
+$accordion-icon-color: $primary;
+$accordion-icon-active-color: $white;
+$accordion-border-color: $primary;
+
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+// Pagination
+$pagination-color: $primary;
+$pagination-active-bg: $primary;
+$pagination-active-color: $white;
+$pagination-active-border-color: $primary;
+$pagination-focus-color: $primary;
+$pagination-focus-box-shadow: 0 0 0 0;
+
+// focus-ring-variables
+$focus-ring-width: 0;
+
+// Forms
+$form-check-min-height: 1.6;
+$input-border-color: $gray-900;
+$input-focus-border-color: $primary;
+
+
+// Progress
+$progress-font-size: 0.75rem;  
+
+// Offcanvas
+
+// scss-docs-start offcanvas-variables
+//$offcanvas-padding-y:               $modal-inner-padding !default;
+//$offcanvas-padding-x:               $modal-inner-padding !default;
+$offcanvas-horizontal-width:        400px !default;
+$offcanvas-vertical-height:         100vh;
+$offcanvas-transition-duration:     .3s !default;
+$offcanvas-bg-color:                var(--#{$prefix}body-bg) !default;
+$offcanvas-color:                   var(--#{$prefix}body-color) !default;
+//$offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
+//$offcanvas-backdrop-bg:             $modal-backdrop-bg !default;
+//$offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;

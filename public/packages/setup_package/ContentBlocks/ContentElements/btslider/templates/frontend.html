@@ -1,0 +1,16 @@
+<f:layout name="Default" />
+<f:section name="Main">
+  <div id="carouselExampleIndicators-{data.uid}" class="carousel slide {f:if(condition:'{data.modus} == {0:1}', then: ' carousel-fade')}" 
+    data-bs-ride="{f:if(condition: '{data.loop}==1', then: 'carousel', else: 'false')}">
+    <f:if condition="{data.indicator}==0">
+      <f:render partial="SliderIndicator" arguments="{data: data}" />
+    </f:if> 
+    <div class="carousel-inner">
+      <f:render partial="SliderItems" arguments="{data: data}" />
+    </div>
+
+    <f:if condition="{data.control}==0">
+      <f:render partial="SliderControl" arguments="{data: data}" />
+    </f:if>
+  </div>
+</f:section>

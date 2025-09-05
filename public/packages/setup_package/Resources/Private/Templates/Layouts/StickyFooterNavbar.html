@@ -1,0 +1,53 @@
+<html
+xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  data-namespace-typo3-fluid="true"
+  xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+  data-namespace-typo3-fluid="true">
+  <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+   <f:comment> <div class="offcanvas-header">
+      <button class="navbar-toggler d-inline-block position-absolute top-20px end-20px" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+        <span class="toggle-button close">
+          <span class="icon-bar bg-primary top-bar"></span>
+          <span class="icon-bar bg-primary middle-bar"></span>
+          <span class="icon-bar bg-primary bottom-bar"></span>
+      </span>
+      </button>
+    </div></f:comment>
+    <div class="offcanvas-body d-flex justify-content-center">
+      <f:render partial="Navigation/Mega" arguments="{_all}" />
+    </div>
+  </div>
+<div class="d-flex flex-column h-100">
+  <header class="bg-white">
+    <div class="container-fluid px-0">
+      <div class="navbar w-100 fixed-top">
+          <div class="container-fluid align-items-start align-items-lg-center justify-content-start justify-content-lg-between px-0" >
+            <f:comment><f:render partial="Header/Logo" arguments="{_all}"/>        
+             <f:if condition="{data.backend_layout} == 'pagets__default_onepage'">
+            <f:then>
+              <f:render partial="Navigation/Section" arguments="{_all}" />
+            </f:then>
+            <f:else>
+              <f:render partial="Navigation/Mega" arguments="{_all}" />
+            </f:else>
+          </f:if>
+          <f:render partial="Navigation/Mega" arguments="{_all}" />
+         <f:cObject typoscriptObjectPath="lib.searchbox" />
+          <f:render partial="Navigation/ResponsiveToggler" arguments="{_all}" />
+        </div>
+        </f:comment>  
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid px-0 mt-70 mt-lg-0 mb-auto">
+    <f:if condition="{data.uid} > 1">
+      <f:render partial="Header/Jumbotron" arguments="{_all}" />
+    </f:if>
+    <f:render section="content" />
+    <f:render partial="Footer/FooterInfo" arguments="{_all}" />
+  </main>
+  <footer class="bg-primary text-white d-flex-column text-center mt-auto pt-30" role="contentinfo">
+    <f:render partial="Footer/Copyright" arguments="{_all}" />
+  </footer>
+</div>
+</html><f:render partial="Footer/ToTop.html" arguments="{_all}"/>

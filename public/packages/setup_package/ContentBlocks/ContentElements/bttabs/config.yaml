@@ -1,0 +1,26 @@
+name: contentblocks/bttabs
+title: contentblocks/bttabs
+description: 'Tabs mit Bootstrap 5.3'
+saveAndClose: true
+prefixFields: true
+prefixType: full
+basics:
+  - contentblocks/Tabssettings
+  - contentblocks/Appearance
+  - contentblocks/Links
+group: ContentBlocks
+fields:
+  - identifier: header
+    label: Pluginbeschreibung für TYPO3 BE
+    type: Text
+  - identifier: tab_2
+    type: Tab
+    label: Tab Items
+  - identifier: palette_42
+    type: Palette
+  - identifier: tabsets
+    type: Collection
+    label: Tabitem anlegen
+    foreign_table: tt_content
+    allowedRecordTypes:
+      - contentblocks_textimage

@@ -1,0 +1,26 @@
+name: contentblocks/btcards
+label: contentblocks/btcards
+description: 'Responsive Cardgroup with Bootstrap'
+basics:
+  - contentblocks/Cardgroupsettings
+  - contentblocks/Appearance
+  - contentblocks/Links
+group: ContentBlocks
+saveAndClose: true
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: header
+    label: Pluginbeschreibung für TYPO3 BE
+    type: Text
+  - identifier: tab_create
+    type: Tab
+    label: Einzelne Cards anlegen
+  - identifier: palette_create
+    type: Palette
+  - identifier: cardsets
+    type: Collection
+    label: Cards anlegen
+    foreign_table: tt_content
+    allowedRecordTypes:
+      - contentblocks_card

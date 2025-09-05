@@ -1,0 +1,37 @@
+.tx-kesearch-pi1 {
+  .result-list-item:hover {
+    background: rgba($primary, 0.1);
+  }
+  a {
+    color: $gray-900;
+    @extend .stretched-link;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+/**
+ * Search Overlay
+ */
+
+.search-close-btn:hover {
+    cursor: pointer;
+}
+
+#search-overlay {
+  display: none;
+}
+
+#search-overlay.visible {
+  display: block;
+}
+
+.block:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: 0;
+}

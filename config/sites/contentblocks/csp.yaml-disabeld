@@ -1,0 +1,60 @@
+inheritDefault: true
+mutations:
+  - mode: "set"
+    directive: "default-src"
+    sources:
+      - "https://contentblocks.ddev.site/"
+
+  - mode: "extend"
+    directive: "default-src"
+    sources:
+      - "'nonce-proxy'"
+
+  - mode: "reduce"
+    directive: "script-src"
+    sources:
+      #- "'unsafe-eval'"
+      - "'self'"
+
+  - mode: "extend"
+    directive: "img-src"
+    sources:
+      - data:;
+
+  - mode: "extend"
+    directive: "style-src-elem"
+    sources:
+      - "'nonce-proxy'"
+      #- "'unsafe-eval'"
+
+  - mode: "extend"
+    directive: "style-src-elem"
+    sources:
+     - "https://contentblocks.ddev.site/"
+
+  - mode: "set"
+    directive: "script-src-elem"
+    sources:
+      - "'nonce-proxy'"
+     # - "'unsafe-eval'"
+
+  - mode: "extend"
+    directive: "font-src"
+    sources:
+      - "'nonce-proxy'"
+
+  - mode: "reduce"
+    directive: "font-src"
+    sources:
+      - http://contentblocks.ddev.site
+
+  - mode: "extend"
+    directive: "style-src-attr"
+    sources:
+      - "'nonce-proxy'"
+
+  - mode: "reduce"
+    directive: "style-src-attr"
+    sources:
+      - "'unsafe-inline'"
+

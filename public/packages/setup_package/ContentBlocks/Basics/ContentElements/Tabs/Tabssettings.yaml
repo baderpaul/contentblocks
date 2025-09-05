@@ -1,0 +1,19 @@
+identifier: contentblocks/Tabssettings
+fields:
+  - identifier: tabssettings
+    type: Tab
+    label: Tabs Einstellungen
+  - identifier: palette_tabssettings
+    type: Palette
+    description: Funktionale Einstellungen
+    fields:
+      - identifier: choose-display
+        type: Select
+        renderType: selectSingle
+        label: Ansicht zwischen Tabs & Pills auswählen
+        default: 'one'
+        items:
+          - label: 'Tabs (eckig)'
+            value: one
+          - label: 'Pills (abgerundet)'
+            value: two

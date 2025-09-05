@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+.idea
+.history/
+.env
+public/fileadmin/
+public/typo3temp/
+public/typo3conf/
+public/typo3/
+public/packages/setup_package/Resources/Private/Scss/.sass-cache
+public/packages/setup_package/Resources/Public/ContentBlocks
+public/packages/setup_package/Resources/Public/Contrib
+var/
+!/vendor/
+/vendor/*
+!/vendor/contentblocks/
+config/system/

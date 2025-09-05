@@ -1,0 +1,64 @@
+page.meta {
+    robots = index,follow
+    viewport = width=device-width, initial-scale=1 
+    apple-mobile-web-app-capable = no 
+    X-UA-Compatible = IE=edge
+    X-UA-Compatible {
+            attribute = http-equiv
+        }
+    description.data = page:description
+    description.ifEmpty.data = levelfield :-1, description, slide
+    description.crop = 120|
+    keywords.data = page:keywords
+    keywords.ifEmpty.data = levelfield :-1, keywords, slide
+}
+
+# Info https://stackoverflow.com/questions/63558297/typo3-add-to-homescreen-icon/63558477#63558477
+page.headerData.8 = TEXT
+page.headerData.8 {
+    value (
+    <meta name="theme-color" content="#ffffff"/>  
+    <meta name="mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+    <meta name="apple-mobile-web-app-title" content="Test Package"> 
+    <meta name="msapplication-TileImage" content="{path:EXT:{$extKey}/Resources/Public/Icons/Pwa/apple-icon-144x144.png}">  
+    <meta name="msapplication-TileColor" content="#ffffff">
+     <link rel="manifest" href="/manifest.json">
+     )
+     insertData = 1
+}
+
+#page.headerData.10 < lib.preConnect
+page.headerData.11 < lib.preLoad
+page.headerData.11.insertData = 1
+
+//page.headerData.13 < lib.preImage
+page.includeCSS {
+    lightbox = EXT:{$extKey}/Resources/Public/Contrib/glightbox/dist/css/glightbox.min.css
+    themestyle = EXT:{$extKey}/Resources/Public/Styles/StyleSheet.css
+    themestyle {
+        forceOnTop = 1
+        media = all
+        
+    }   
+}
+
+page.includeJSFooter {
+    bootstrap = EXT:{$extKey}/Resources/Public/Contrib/bootstrap/dist/js/bootstrap.bundle.min.js
+    bootstrap.excludeFromConcatenation = 1
+    bootstrap.defer= 1
+    #mobiledropdown = EXT:{$extKey}/Resources/Public/Contrib/metismenujs/dist/metismenujs.js
+    #mobiledropdown.defer = 1
+    //lazysizes = https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js
+    //lazysizes.excludeFromConcatenation = 1
+    //lazysizes.external = 1
+    //lazysizes.defer = 1
+    javascriptfooter = EXT:{$extKey}/Resources/Public/JavaScript/addToFooter.js
+    javascriptfooter.defer = 1
+    lightbox = EXT:{$extKey}/Resources/Public/Contrib/glightbox/dist/js/glightbox.min.js
+    lightbox.defer = 1
+}
+
+[tree.pagelayout == "pagets__default_onepage"]
+    page.includeJSFooter.mobiledropdown >
+[END]

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-07-29T14:42:09+00:00" product-name="contentblocks/btslider">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Slider mit Bootdstrap 5.3</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Carousel/Imageslider with Bootstrap</source>
+			</trans-unit>
+			<trans-unit id="header.label">
+				<source>Kurze Pluginbeschreibung für TYPO3 BE</source>
+			</trans-unit>
+			<trans-unit id="tabs.slidersettings">
+				<source>Slidereinstellungen</source>
+			</trans-unit>
+			<trans-unit id="palettes.palette_slidersettings.label">
+				<source>Slidersettings</source>
+			</trans-unit>
+			<trans-unit id="palettes.palette_slidersettings.description">
+				<source>Funktionale Einstellungen</source>
+			</trans-unit>
+			<trans-unit id="modus.label">
+				<source>Anzeigemodus auswählen</source>
+			</trans-unit>
+			<trans-unit id="modus.items.0.label">
+				<source>slide</source>
+			</trans-unit>
+			<trans-unit id="modus.items.1.label">
+				<source>fade</source>
+			</trans-unit>
+			<trans-unit id="control.label">
+				<source>Controls Prev Next einblenden</source>
+			</trans-unit>
+			<trans-unit id="control.items.0.label">
+				<source>Prev / Next Button einblenden</source>
+			</trans-unit>
+			<trans-unit id="indicator.label">
+				<source>Bulletpoints für jedes Slideelement einblenden</source>
+			</trans-unit>
+			<trans-unit id="indicator.items.0.label">
+				<source>Slideindikatoren anzeigen / Bulletpoints</source>
+			</trans-unit>
+			<trans-unit id="tabs.slideimages">
+				<source>Slideimages anlegen</source>
+			</trans-unit>
+			<trans-unit id="palettes.palette_slideimages.label">
+				<source>Slideimages anlegen</source>
+			</trans-unit>
+			<trans-unit id="slides.label">
+				<source>Slideitems mit Textslogans anlegen</source>
+			</trans-unit>
+			<trans-unit id="slides.image.label">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="slides.slogan_big.label">
+				<source>Slogan Groß</source>
+			</trans-unit>
+			<trans-unit id="slides.slogan_small.label">
+				<source>Slogan Klein</source>
+			</trans-unit>
+			<trans-unit id="slides.links.label">
+				<source>Call to Action Link</source>
+			</trans-unit>
+			<trans-unit id="slides.links.link.label">
+				<source>link</source>
+			</trans-unit>
+			<trans-unit id="slides.links.link_title.label">
+				<source>link_title</source>
+			</trans-unit>
+			<trans-unit id="tabs.links_tab">
+				<source>Links</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,150 @@
+/*
+ Bootstrap Accordion with js
+ some default css classes also used in details accordion
+*/
+.accordion-header::after {
+    display: none;
+}
+
+.accordion-button:focus:not(:focus-visible) {
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+.accordion-body{
+    h2 {
+        display: inline;
+    }
+}
+
+.accordion-button-plus-minus::after {
+background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' font-weight='bold' fill='white'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/></svg>");
+transform: rotate(-360deg) .2s ease-in-out;
+scale: 1.7;
+border: solid green 2px;
+}
+
+.accordion-button-plus-minus:not(.collapsed)::after {
+background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' font-weight='bold' fill='white'><path fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/></svg>");
+transform: rotate(360deg) .2s ease-in-out;
+scale: 1.7;
+}
+
+/*
+ Details Accordion without js
+ some css styles come from the default Bootstrap Accordion
+ Good Pages for Info are
+ https://christianoliff.com/blog/building-a-bootstrap-accordion-with-the-details-summary-html-tags/
+ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+ https://nerdy.dev/open-and-close-transitions-for-the-details-element
+*/
+
+details {
+    
+    @media (prefers-reduced-motion: no-preference) {
+      interpolate-size: allow-keywords;
+    }
+    
+    &::details-content {
+      opacity: 0;
+      block-size: 0;
+      overflow-y: clip; 
+      transition: content-visibility 1s allow-discrete, opacity 1s, block-size 1s;
+    }
+    
+    &[open]::details-content {
+      opacity: 1;
+      block-size: auto;
+    }
+  }
+
+  details.accordion-item:not([open]):last-of-type .accordion-button {
+    border-bottom-right-radius: var(--bs-accordion-border-radius);
+    border-bottom-left-radius: var(--bs-accordion-border-radius);
+  }
+  
+  details.accordion-item:not([open]) .accordion-button::after {
+    background-image: var(--bs-accordion-btn-active-icon);
+    background-position: center center;
+    transform: unset;
+  }
+  
+  details.accordion-item .accordion-button,
+  details.accordion-item[open] .accordion-button {
+    box-shadow: none;
+  }
+  
+  details.accordion-item[open] .accordion-button::after {
+    background-image: var(--bs-accordion-btn-icon);
+    transform: var(--bs-accordion-btn-icon-transform);
+    background-position: center center;
+  }
+
+  summary {
+    border-color: var(--bs-accordion-border-color);
+  }
+ 
+  /* Hide the default disclosure triangle on Safari */
+  summary.accordion-button::-webkit-details-marker {
+    display: none;
+  }
+
+  summary.accordion-button:focus:not(:focus-visible) {
+    border-bottom: 0;
+}
+
+  .accordion-button-plus-minus-dialog::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' font-weight='bold' fill='white'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/></svg>") !important;
+  }
+
+  details[open] :is(summary.accordion-button-plus-minus-dialog)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' font-weight='bold' fill='white'> <path fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/></svg>") !important;
+  }
+
+  .accordion-header .accordion-button,
+  summary .accordion-button {
+    font-size: inherit;
+  }
+  /*
+ Bootstrap Tab to Accordion 
+*/
+
+  @media (max-width: 991px) {
+ .tabtoaccordion.tab-content > .tab-pane {
+    display: block;
+  }
+ .fade:not(.show){
+    opacity: 1;
+  }
+}
+
+.tabtoaccordion h2,
+.tabtoaccordion .nav-link,
+.tabtoaccordion .accordion-button  {
+  font-size: $font-size-tabtoacc;
+}
+
+ @media (max-width: 991px) {
+.tabtoaccordion .accordion-button-plus-minus-dialog::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' font-weight='bold' fill='white'> <path fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/></svg>") !important;
+  }
+.tabtoaccordion .accordion-button-plus-minus-dialog.collapsed::after {
+   
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' font-weight='bold' fill='white'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/></svg>") !important;
+  }
+ }
+
+ @media (min-width: 992px) {
+ .tabtoaccordion.tab-content>.tab-pane,
+ .tabtoaccordion.tab-content>.tab-pane.active.show .collapse  {
+    display: block;
+    opacity: 1;
+       }
+ 
+ .tabtoaccordion.tab-content>.tab-pane.fade {
+     transition: opacity 0.01s ease-out;
+     &:not(.show) {
+     display: none;
+       }
+     }
+ }

@@ -1,0 +1,15 @@
+name: contentblocks/btslider
+label: contentblocks/btslider
+description: 'Carousel/Imageslider with Bootstrap 5.3'
+basics:
+  - contentblocks/Appearance
+  - contentblocks/Slidersettings
+  - contentblocks/Slideritems
+  - contentblocks/Links
+group: ContentBlocks
+prefixFields: false
+fields:
+  - identifier: header
+    label: Kurze Pluginbeschreibung für TYPO3 BE
+    type: Text
+    useExistingField: true

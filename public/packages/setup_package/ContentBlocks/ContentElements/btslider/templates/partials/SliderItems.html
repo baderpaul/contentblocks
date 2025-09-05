@@ -1,0 +1,15 @@
+<f:for each="{data.slides}" as="slide" iteration="indicator-2">
+
+    <f:for each="{slide.image}" as="image">
+        <div class="carousel-item {f:if(condition:'{indicator-2.isFirst}',then:' active')}">
+            <f:image image="{image.originalFile}" fileExtension="webp" alt="{slide.title}"  loading="lazy"/>
+
+            <f:if condition="{slide.slogan_big} || {slide.slogan_small} || {slide.slogan_cta}">
+                <f:render partial="SliderSlogan" arguments="{_all}" />
+            </f:if>
+            <f:if condition="{slide.imagedescription}">
+                <f:render partial="SliderItemDescrption" arguments="{_all}" />
+            </f:if>
+        </div>
+    </f:for>
+</f:for>

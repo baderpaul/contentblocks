@@ -1,0 +1,7 @@
+lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.nonWrappedTag = figure
+#lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.nonWrappedTag >
+#lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines >
+#lib.parseFunc_RTE.externalBlocks.table.stdWrap >
+
+
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list = table,table-striped,table-bordered,table-hover,table-hover,table-sm

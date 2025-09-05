@@ -1,0 +1,2 @@
+@import './TsConfig/*.tsconfig'
+@import './TsConfig/Page/CropVariants/*.tsconfig'

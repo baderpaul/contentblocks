@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2025-08-27T11:27:40+00:00" product-name="contentblocks/bttabstoaccordion">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Bootstrap 5.3 Tabs to Accordion</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Description for Content Element contentblocks/bttabstoaccordion</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

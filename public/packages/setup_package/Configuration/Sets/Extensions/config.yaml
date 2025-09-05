@@ -1,0 +1,5 @@
+name: contentblocks/setupextentions
+label: Custom Typoscript for extentions without default set
+
+dependencies:
+  - contentblocks/setup-package

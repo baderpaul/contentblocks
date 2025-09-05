@@ -1,0 +1,34 @@
+base: 'https://contentblocks.ddev.site'
+baseVariants:
+  -
+    base: 'https://contentblocks.ddev.site/'
+    condition: 'applicationContext == "Development"'
+dependencies:
+  - typo3/fluid-styled-content
+  - contentblocks/setup-package
+  - contentblocks/setupextentions
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    locale: de_DE.utf8
+    hreflang: de-DE
+    base: /
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    flag: de
+    languageId: 0
+  -
+    title: English
+    enabled: true
+    languageId: 1
+    base: /en/
+    locale: en_US.UTF-8
+    navigationTitle: English
+    flag: gb
+    hreflang: en-EN
+    websiteTitle: 'Cb En'
+    fallbackType: strict
+    fallbacks: ''
+rootPageId: 1
+websiteTitle: ''

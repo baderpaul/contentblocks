@@ -1,0 +1,26 @@
+name: contentblocks/btdetailsaccordion
+title: contentblocks/btdetailsaccordion
+description: 'Accordion with Bootstrap'
+basics:
+  - contentblocks/Accordionsettings
+  - contentblocks/Appearance
+  - contentblocks/Links
+group: ContentBlocks
+saveAndClose: true
+prefixFields: true
+prefixType: full
+fields:
+  - identifier: header
+    label: Pluginbeschreibung für TYPO3 BE
+    type: Text
+  - identifier: tab_2
+    type: Tab
+    label: Accordion Items
+  - identifier: palette_25
+    type: Palette
+  - identifier: accordiondetailsset
+    type: Collection
+    label: Accordionitems anlegen
+    foreign_table: tt_content
+    allowedRecordTypes:
+      - contentblocks_textimage

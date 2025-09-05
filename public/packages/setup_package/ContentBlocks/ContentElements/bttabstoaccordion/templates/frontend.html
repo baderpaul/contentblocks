@@ -1,0 +1,74 @@
+<f:layout name="Default" />
+<f:section name="Main">
+   <f:comment><f:asset.css identifier="myCssIdentifier" useNonce="1" href="{cb:assetPath()}/frontend.css"/></f:comment> 
+
+    <ul class="tabtoaccor nav pt-20 pt-md-40 {f:if(condition: '{data.choose-display} == two', then: 'nav-pills justify-content-left', else: 'nav-tabs')} d-none d-lg-flex"
+    id="tab-nav-{data.uid}" role="tablist">
+    <f:for each="{data.tabtoaccordionsets}" as="tabset" iteration="i">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {f:if(condition:i.isFirst, then: 'active')}" id="{i.index}-tab"
+                type="button" 
+                data-bs-toggle="tab" 
+                data-bs-target="#{i.index}-tab-pane" 
+                role="tab"
+                aria-controls="{i.index}-tab-pane" 
+                aria-selected="true">
+                {tabset.heading -> f:format.nl2br()}
+            </button>
+        </li>
+    </f:for>
+</ul>
+<div class="tabtoaccordion tab-content accordion mb-25 mb-md-30"
+id="tab-content-{data.uid}">
+<f:for each="{data.tabtoaccordionsets}" as="tabset" iteration="i">
+    <div class="tab-pane fade {f:if(condition:i.isFirst, then: 'active show')} {f:if(condition:'{tabset.imageposition}', then: 'clearfix')} accordion-item border-0 border-lg-1" 
+    id="{i.index}-tab-pane"
+        role="tabpanel" 
+        aria-labelledby="{i.index}-tab"
+        tabindex="0" >
+         <h2 class="accordion-header d-lg-none border border-start-0 border-end-0 border-top-0 border-white " id="heading-{i.index}">
+      <button class="accordion-button bg-primary text-white {f:if(condition:'{data.choose-icon} == two', then: ' accordion-button-plus-minus-dialog')} {f:if(condition:i.isFirst, then: '', else: 'collapsed')} d-lg-block" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#accordion-{i.index}" 
+      aria-expanded="true" 
+      aria-controls="#accordion-{i.index}">
+      {tabset.heading -> f:format.nl2br()}</button>
+    </h2>
+                    <div id="accordion-{i.index}" 
+                    data-bs-parent="#tab-content-{data.uid}"
+                    class="accordion-collapse collapse {f:if(condition:i.isFirst, then: ' show')} d-lg-block"
+                    aria-labelledby="heading-{i.index}">
+                    <div class="accordion-body d-flex border border-1 border-top-0 border-primary {f:if(condition:'{tabset.imageposition} == right', then: 'flex-row-reverse column-gap-20', else: 'flex-row column-gap-20')} ">   
+                        <f:if condition="{tabset.image}">
+                            <f:for each="{tabset.image}" as="image">
+                                <picture>
+                                    <source
+                                        srcset="{f:uri.image(image: image, maxWidth: '250', fileExtension:'webp', fileExtension:'webp', cropVariant: 'desktop')}"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="{f:uri.image(image: image, maxWidth: '200', fileExtension:'webp', cropVariant: 'desktop')}, {f:uri.image(image: image, fileExtension:'webp', maxWidth: '200', cropVariant: 'desktop')} 2x"
+                                        media="(min-width: 992px)">
+                                    <source
+                                        srcset="{f:uri.image(image: image, maxWidth: '150', fileExtension:'webp', cropVariant: 'tablet')}, {f:uri.image(image: image, fileExtension:'webp', maxWidth: '150', cropVariant: 'tablet')} 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="{f:uri.image(image: image, maxWidth: '100', fileExtension:'webp', cropVariant: 'smartphone')}, {f:uri.image(image: image, fileExtension:'webp', maxWidth: '100', cropVariant: 'smartphone')} 2x"
+                                        media="(max-width: 767px)">
+                                    <f:comment>Fallback</f:comment>
+                                    <img class="img-responsive"
+                                        src="{f:uri.image(image: image, maxWidth: settings.maxImgWidth, cropVariant: 'default', fileExtension:'webp')}"
+                                        alt="{image.alternative}" title="{image.title}" loading="lazy">
+                                </picture>
+                            </f:for>
+                        </f:if>
+                        <div>
+                         <h3 class="d-block">{tabset.header}</h3>
+                        {tabset.bodytext -> f:format.stripTags(allowedTags: "<p><span><button><a>")}
+                            </div>
+                    </div>
+                </div>
+    </div>
+</f:for>
+</div>
+</f:section>

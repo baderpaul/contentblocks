@@ -1,0 +1,5 @@
+name: contentblocks/setupnews
+label: Custom Typoscript for news
+
+dependencies:
+  - contentblocks/setup-package

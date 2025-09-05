@@ -1,0 +1,33 @@
+plugin.tx_news {
+    rss.channel {
+        title = Dummy Title
+        description =
+        link = http://example.com
+        language = en-gb
+        copyright = TYPO3 News
+        category =
+        generator = TYPO3 EXT:news
+    }
+
+    opengraph {
+        site_name = Bussines
+        twitter {
+            card = summary
+            site =
+            creator =
+        }
+    }
+
+    settings {
+        cssFile >
+    }
+}
+
+plugin.tx_news.settings.sitemap {
+	
+	startingpoint = 13
+	# cat=plugin.tx_news/sitemap/0020; type=int+; label=Detail view page UID for sitemap
+	detailPid = 14
+	# cat=plugin.tx_news/sitemap/0030; type=int+; label=Recursion level of startingpoint for sitemap
+	recursive = 2
+}

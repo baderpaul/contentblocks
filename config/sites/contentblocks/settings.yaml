@@ -1,0 +1,3 @@
+styles.templates.templateRootPath: 'EXT:setup_package/Resources/Private/Templates/FluidStyledContent/Templates/'
+styles.templates.partialRootPath: 'EXT:setup_package/Resources/Private/Templates/FluidStyledContent/Partials/'
+styles.templates.layoutRootPath: 'EXT:setup_package/Resources/Private/Templates/FluidStyledContent/Layouts/'

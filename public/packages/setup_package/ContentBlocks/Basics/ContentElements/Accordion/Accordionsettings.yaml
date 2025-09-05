@@ -1,0 +1,19 @@
+identifier: contentblocks/Accordionsettings
+fields:
+  - identifier: accordionsettings
+    type: Tab
+    label: Accordion Einstellungen
+  - identifier: palette_accordionsettings
+    type: Palette
+    description: Funktionale Einstellungen
+    fields:
+      - identifier: choose-icon
+        type: Select
+        renderType: selectSingle
+        label: Close/Open Icon auswählen
+        default: 'one'
+        items:
+          - label: 'Mit Pfeilchen'
+            value: one
+          - label: 'Mit Plus - Minus Zeichen'
+            value: two

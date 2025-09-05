@@ -1,0 +1,51 @@
+identifier: contentblocks/Slidersettings
+fields:
+
+  - identifier: slidersettings
+    type: Tab
+    label: Slidereinstellungen
+
+  - identifier: palette_slidersettings
+    type: Palette
+    label: Slidersettings
+    description: Funktionale Einstellungen
+    fields:
+      - identifier: modus
+        type: Select
+        renderType: selectMultipleSideBySide
+        label: Anzeigemodus auswählen 
+        maxitems: 1
+        items:
+        - label: slide
+          value: 0
+        - label: fade
+          value: 1
+      - type: Linebreak      
+      - identifier: control
+        type: Checkbox
+        label: Controls Prev Next einblenden
+        renderType: checkboxLabeledToggle
+        default: 
+        items:
+        - label: 'Prev / Next Button einblenden'
+          labelChecked: 'On'
+          labelUnchecked: 'Out'
+          invertStateDisplay: true     
+      - identifier: indicator
+        type: Checkbox
+        label: Bulletpoints für jedes Slideelement einblenden
+        renderType: checkboxLabeledToggle
+        items:
+        - label: 'Slideindikatoren anzeigen / Bulletpoints'
+          labelChecked: 'On'
+          labelUnchecked: 'Out'
+          invertStateDisplay: true
+      - identifier: loop
+        type: Checkbox
+        label: Slides als Endlosschleife anzeigen
+        renderType: checkboxLabeledToggle
+        items:
+        - label: 'Slides loopen lassen'
+          labelChecked: 'Loop On'
+          labelUnchecked: 'Loop Out'
+          invertStateDisplay: false

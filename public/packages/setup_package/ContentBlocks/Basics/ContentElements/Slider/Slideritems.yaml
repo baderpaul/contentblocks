@@ -1,0 +1,49 @@
+identifier: contentblocks/Slideritems
+saveAndClose: true
+fields:
+  - identifier: slideimages
+    type: Tab
+    label: Slideimages anlegen
+  - identifier: palette_slideimages
+    type: Palette
+    label: Slideimages anlegen
+    fields:
+      - identifier: slides
+        type: Collection
+        label: Slideitems mit Textslogans anlegen
+        fields:
+          - identifier: imagetitle
+            label: Kurzer Text für das Backend
+            type: Text
+          - identifier: image
+            label: Bild
+            type: File
+            allowed: common-image-types
+          - identifier: palette_slogans
+            type: Palette
+            label: Slogan zum Bild - animiert
+          - identifier: slogan_big
+            label: Slogan Groß
+            type: Textarea
+            placeholder: Text groß - wird einzeln animiert
+            rows: 10
+          - identifier: slogan_small
+            label: Slogan Klein
+            type: Textarea
+            placeholder: Text klein - wird einzeln animiert
+            rows: 10
+          - identifier: links
+            label: Call to Action Link
+            type: Collection
+            labelField: link_title
+            fields:
+              - identifier: link
+                type: Link
+                autocomplete: true
+                allowedTypes:
+                  - page
+                  - url
+                  - file
+                max: 150
+              - identifier: link_title
+                type: Text
