@@ -1,6 +1,0 @@
-identifier: TYPO3/Shortcut
-fields:
-  - identifier: shortcut_mode
-    useExistingField: true
-  - identifier: shortcut
-    useExistingField: true
