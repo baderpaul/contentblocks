@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'typo3/cms-base-distribution',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '83a6a6330cebafe041dd6ab3026c0135b898ae1a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -791,9 +791,9 @@
             'dev_requirement' => false,
         ),
         'typo3/cms-base-distribution' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '83a6a6330cebafe041dd6ab3026c0135b898ae1a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
