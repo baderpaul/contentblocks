@@ -1,0 +1,53 @@
+name: contentblocks/button
+table: tx_contentblocks_button
+prefixFields: false
+security:
+  ignorePageTypeRestriction: true
+fields:
+  - identifier: palette_link
+    type: Palette
+    label: Verlinkung und Textlabel auswählen bzw. angeben
+    description: Bei Verlinkung des ganzen Cards muss ein Call-to-Action-Text angegeben werden.
+    fields:
+      - identifier: cta
+        label: Linktext
+        type: Text
+        placeholder: Call to Action Text
+      - identifier: url
+        label: Linkziel
+        type: Link
+        autocomplete: true
+        allowedTypes:
+          - page
+          - url
+          - file
+      - type: Linebreak
+      - identifier: linklabel
+        label: Nur Linklabel verlinken
+        type: Checkbox
+        renderType: checkboxLabeledToggle
+        items:
+        - label: 'Auswählen'
+          labelChecked: 'Label ist verlinkt'
+          labelUnchecked: 'Label ist nicht verlinkt'
+          invertStateDisplay: false
+      - identifier: linkcard
+        label: Ganzes Cardelement verlinken
+        type: Checkbox
+        renderType: checkboxLabeledToggle
+        items:
+        - label: 'Auswählen'
+          labelChecked: 'Card ist verlinkt'
+          labelUnchecked: 'Card ist nicht verlinkt'
+          invertStateDisplay: false
+      - identifier: linkposition
+        label: Position des Links auswählen
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Links'
+            value: text-start
+          - label: 'Mittig'
+            value: text-center
+          - label: 'Rechts'
+            value: text-end

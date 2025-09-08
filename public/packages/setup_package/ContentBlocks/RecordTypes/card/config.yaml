@@ -1,5 +1,5 @@
-name: example/card
-table: tx_example_card
+name: contentblocks/card
+table: tx_contentblocks_card
 title: Einzelnes Cardelement
 prefixFields: false
 security:

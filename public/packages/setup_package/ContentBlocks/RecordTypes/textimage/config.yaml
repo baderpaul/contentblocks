@@ -1,5 +1,5 @@
-name: example/textimage
-table: tx_example_textimage
+name: contentblocks/textimage
+table: tx_contentblocks_textimage
 title: Textimage für Tabs und Accordion
 prefixFields: false
 labelField: heading
