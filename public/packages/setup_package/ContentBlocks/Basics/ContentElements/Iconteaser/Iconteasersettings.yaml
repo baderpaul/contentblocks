@@ -1,0 +1,148 @@
+identifier: contentblocks/Iconteasersettings
+fields:
+  - identifier: iconteasersettings
+    type: Tab
+    label: Iconteaser Einstellungen
+  - identifier: palette_iconteasersettings
+    type: Palette
+    description: Funktionale Einstellungen
+    label: Positionierungen / Größe
+    fields:
+      - identifier: teasermodus
+        type: Radio
+        label: Modus auswählen wie der Icon angezeigt wird
+        default: 'one'
+        items:
+          - label: 'Oberhalb'
+            value: 'one'
+          - label: 'Hängend Links'
+            value: 'three'
+      - identifier: teaseralignment
+        label: Horizontale Position des Teasers auswählen bei Oberhalb od. Unterhalber Positionierung.
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Links'
+            value: text-start
+          - label: 'Mittig'
+            value: text-center
+          - label: 'Rechts'
+            value: text-end
+      - type: Linebreak
+      - identifier: iconsize
+        label: Größe des Icons auswählen
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Klein'
+            value: feature-icon-sm
+          - label: 'Mittel'
+            value: feature-icon-md
+          - label: 'Groß'
+            value: feature-icon-lg              
+      - identifier: ctabuttonsameheight
+        label: 'Alle CTA Buttons werden auf die gleiche Höhe gesetzt'
+        type: Checkbox  
+        renderType: checkboxLabeledToggle
+        items:
+        - label: 'Auswählen'
+          labelChecked: 'CTA Buttons sind auf gleicher Höhe gesetzt'
+          labelUnchecked: 'Alle CTA Buttons sind nicht auf gleicher Höhe gesetzt'
+          invertStateDisplay: false
+  - identifier: palette_iconteaser_responsive
+    type: Palette
+    label: Responsives Verhalten / Anzahl der Teaser in einer Reihe
+    fields:
+      - identifier: responsive_xs
+        type: Select
+        renderType: selectSingle
+        label: Anzahl Mobil < 576px
+        items:
+          - label: 'Auswählen'
+            value: ''
+          - label: '1'
+            value: row-cols-1
+          - label: '2'
+            value: row-cols-2
+      - identifier: responsive_sm
+        label: Anzahl Tablet > 576px
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Auswählen'
+            value: ''
+          - label: '1'
+            value: row-cols-sm-1
+          - label: '2'
+            value: row-cols-sm-2
+      - identifier: responsive_md
+        type: Select
+        renderType: selectSingle
+        label: Anzahl Tablet > 768px
+        items:
+          - label: 'Auswählen'
+            value: ''      
+          - label: '3'
+            value: row-cols-md-3
+          - label: '4'
+            value: row-cols-md-4
+      - identifier: responsive_lg
+        type: Select
+        renderType: selectSingle
+        label: Anzahl Desktop > 992px
+        items:
+          - label: 'Auswählen'
+            value: ''
+          - label: '3'
+            value: row-cols-lg-3
+          - label: '4'
+            value: row-cols-lg-4
+          - label: '5'
+            value: row-cols-lg-5
+          - label: '6'
+            value: row-cols-lg-6
+      - type: Linebreak
+  - identifier: palette_iconteaser_responsive_space
+    type: Palette
+    label: Responsives Verhalten / Abstand zwischen den einzelnen Teaserboxen.
+    description: Horizontal und Vertikaler Zwischenraum zwischen den Teaserboxen.
+    fields:
+      - identifier: space_mobile
+        type: Select
+        renderType: selectSingle
+        label: Abstand Mobiledevices auswählen
+        items:
+          - label: 'Auswählen'
+            value: ''
+          - label: '10px'
+            value: gx-10
+          - label: '15px'
+            value: gx-15
+          - label: '20px'
+            value: gx-20
+      - identifier: space_tablet
+        type: Select
+        renderType: selectSingle
+        label: Abstand Tabletdevices auswählen
+        items:
+          - label: 'Auswählen'
+            value: ''
+          - label: '15px'
+            value: gx-ms-15
+          - label: '20px'
+            value: gx-ms-20
+          - label: '25px'
+            value: gx-ms-25
+      - identifier: space_desktop
+        type: Select
+        renderType: selectSingle
+        label: Abstand Desktopdevices auswählen
+        items:
+          - label: 'Auswählen'
+            value: ''
+          - label: '25px'
+            value: gx-md-25
+          - label: '30px'
+            value: gx-md-30
+          - label: '40px'
+            value: gx-md-40

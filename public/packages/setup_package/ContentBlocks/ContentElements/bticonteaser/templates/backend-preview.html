@@ -1,0 +1,18 @@
+<div class="mb-3">Vorhandene Teaser mit Icon</div>
+<div class="d-inline-flex flex-wrap" style="gap: 20px;">
+    <f:for each="{data.collectionsets}" as="collectionset">
+        <div class="d-inline-flex flex-column">
+            <f:if condition="{data.teasermodus}==one">
+                <f:render partial="SvgItemPreview" arguments="{_all}"/>
+        </f:if>
+            <h2 class="mb-0" style="font-size: 16px;"> {collectionset.teaserheadline -> f:format.nl2br()}
+            </h2>
+            <p>
+                {collectionset.bodytextsimple -> f:format.crop(maxCharacters: 25) -> f:format.stripTags()}
+            </p>
+            <f:if condition="{data.teasermodus}==two">
+                <f:render partial="SvgItemPreview" arguments="{_all}"/>
+        </f:if>
+        </div>
+    </f:for>
+</div>
