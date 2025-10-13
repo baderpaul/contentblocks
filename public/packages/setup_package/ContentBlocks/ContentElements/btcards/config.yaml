@@ -7,10 +7,10 @@ basics:
   - contentblocks/Links
 group: ContentBlocks
 saveAndClose: true
-prefixFields: true
+prefixFields: false
 prefixType: full
 fields:
-  - identifier: header
+  - identifier: backendheader
     label: Pluginbeschreibung für TYPO3 BE
     type: Text
   - identifier: tab_create

@@ -1,14 +1,13 @@
 <f:layout name="Default" />
 <f:section name="Main">
-    <div class="row mb-25 mb-md-30 mx-0 cardgroup
+    <div class="row mb-25 mb-md-30 cardgroup
         {f:if(condition: '{data.responsive_xs}', then: '{data.responsive_xs}')}
         {f:if(condition: '{data.responsive_sm}', then: '{data.responsive_sm}')}
         {f:if(condition: '{data.responsive_md}', then: '{data.responsive_md}')}
         {f:if(condition: '{data.responsive_lg}', then: '{data.responsive_lg}')}
         {f:if(condition: '{data.cardspace_mobile}', then: '{data.cardspace_mobile}')}
         {f:if(condition: '{data.cardspace_tablet}', then: '{data.cardspace_tablet}')}
-        {f:if(condition: '{data.cardspace_desktop}', then: '{data.cardspace_desktop}')}   
-">
+        {f:if(condition: '{data.cardspace_desktop}', then: '{data.cardspace_desktop}')}">
         <f:for each="{data.cardsets}" as="cardset" iteration="i">
             <div class="col">
                 <div class="card h-100 border border-primary">
@@ -21,20 +20,37 @@
                         <f:render partial="CardTitle" arguments="{_all}" />
                         <f:render partial="CardBody" arguments="{_all}" />
                     </div>
-                    <f:if condition="{cardset.linkcard} || {cardset.linklabel}">
+                    <f:if condition="{cardset.links} || {cardset.linkcard}">
                         <f:then>
-                          <div class="card-footer">
-                            <f:render partial="CardFooter.html" arguments="{_all}" />
-                        </div>
+                            <div class="card-footer {cardset.linkposition}">
+                                <f:if condition="{cardset.links}">
+                                    <f:for each="{cardset.links}" as="link-item">
+                                        <f:if condition="{link-item.linklabel}">
+                                            <f:then>
+                                                <f:render partial="CardFooter.html" arguments="{_all}" />
+                                            </f:then>
+                                            <f:else>
+                                                <f:render partial="CardFooter.html" arguments="{_all}" />
+                                            </f:else>
+                                        </f:if>
+                                    </f:for>
+                                </f:if>
+                            </div>
                         </f:then>
-                        <f:else>
+                    </f:if>
+                    <f:if condition="{cardset.showtextfooter} && !{cardset.links} && !{cardset.linkcard}">
+                        <f:then>
                             <div class="card-footer bg-primary-subtle text-primary-emphasis {cardset.linkposition}">
                                 {cardset.footertext}
-                              </div>
+                            </div>
+                        </f:then>
+                        <f:else if="!{cardset.showtextfooter} && !{cardset.links} && !{cardset.linkcard}">
+                            <div class="card-footer bg-primary-subtle text-primary-emphasis ">&nbsp;
+                            </div>
                         </f:else>
-                        </f:if> 
+                    </f:if>
                 </div>
-            </div>         
+            </div>
         </f:for>
     </div>
 </f:section>

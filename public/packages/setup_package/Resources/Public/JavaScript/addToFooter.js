@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   } else {
     // Warnung ausgeben, wenn ein Element nicht gefunden wurde
-    console.warn('Ein oder mehrere Elemente für die Suchfunktion wurden nicht gefunden (IDs: close-btn, search-overlay, search-btn)');
+   // console.warn('Ein oder mehrere Elemente für die Suchfunktion wurden nicht gefunden (IDs: close-btn, search-overlay, search-btn)');
   }
 
 }); 
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 class Accordion {
   constructor(i) {
     (this.el = i),
-      (this.summary = i.querySelector("summary")),
+      (this.summary = i.querySelector(".accordion-button")),
       (this.content = i.querySelector(".accordion-body")),
       (this.animation = null),
       (this.isClosing = !1),
@@ -197,7 +197,7 @@ class Accordion {
       (this.el.style.height = this.el.style.overflow = "");
   }
 }
-document.querySelectorAll("details").forEach((i) => {
+document.querySelectorAll(".accordion-item").forEach((i) => {
   new Accordion(i);
 });
 

@@ -1,7 +1,7 @@
 /*
   Fix for gutter padding left & right - remove it.
   Gap will works for cards in Bootstrap 6 but not jet.
-*/
+
 @include media-breakpoint-down(sm) {
     .cardgroup.row-cols-1>.col {
         padding-left: 0;
@@ -45,12 +45,12 @@
         padding-right: 0;
     }
 }
-
+*/
 // Sass for filterbtcard
-  
+  /*
   .col.project.hide {
     /* You can play with the seconds to change the "animation" */
-    animation: hide 0.1s ease 0s 1 normal forwards;
+   /* animation: hide 0.1s ease 0s 1 normal forwards;
     transform-origin: center;
     display: none;
     margin: 0;
@@ -78,4 +78,4 @@
 
   .card-title {
     font-size: clamp(1rem, calc(0.883rem + 0.391vw), 1.25rem);
-  }
+  }*/

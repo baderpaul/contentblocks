@@ -3,6 +3,7 @@ return [
     'BE' => [
         'debug' => false,
         'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$dHRPcWJPOWZYZWRObGZvNg$I4qfU865gvFsePf+3WHPuYyFpnjOnsOKHP9U4dUXAPc',
+        'lockSSL' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -33,6 +34,9 @@ return [
         ],
     ],
     'EXTENSIONS' => [
+        'additional_reports' => [
+            'itemsPerPage' => '30',
+        ],
         'backend' => [
             'backendFavicon' => '',
             'backendLogo' => '',
@@ -51,7 +55,7 @@ return [
         'cacheHash' => [
             'enforceValidation' => true,
         ],
-        'debug' => false,
+        'debug' => true,
         'disableNoCacheParameter' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -115,11 +119,13 @@ return [
         'features' => [
             'extbase.consistentDateTimeHandling' => true,
             'frontend.cache.autoTagging' => true,
+            'security.backend.enforceReferrer' => true,
             'security.frontend.enforceContentSecurityPolicy' => true,
             'security.frontend.reportContentSecurityPolicy' => true,
             'security.system.enforceAllowedFileExtensions' => true,
         ],
         'sitename' => 'Contentblocks',
+        'systemLocale' => 'de_DE.UTF-8',
         'systemMaintainers' => [
             1,
             2,

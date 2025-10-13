@@ -20,6 +20,7 @@
 		}
 	],
 	"require": {
+		"apen/additional_reports": "^3.4",
 		"b13/container": "^3.1",
 		"contentblocks/setup-package": "^1.0",
 		"friendsoftypo3/content-blocks": "^1.3",
@@ -39,10 +40,10 @@
 		"typo3/cms-impexp": "^13.4",
 		"typo3/cms-info": "^13.4",
 		"typo3/cms-install": "^13.4",
+		"typo3/cms-lowlevel": "^13.4",
 		"typo3/cms-reactions": "^13.4",
 		"typo3/cms-recycler": "^13.4",
 		"typo3/cms-rte-ckeditor": "^13.4",
-		"typo3/cms-lowlevel": "^13.4",
 		"typo3/cms-seo": "^13.4",
 		"typo3/cms-setup": "^13.4",
 		"typo3/cms-sys-note": "^13.4",

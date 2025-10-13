@@ -813,7 +813,7 @@ progress {
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 620px;
+    max-width: 750px;
   }
 }
 @media (min-width: 992px) {
@@ -7792,7 +7792,8 @@ textarea.form-control-lg {
   margin-bottom: 2.8125rem;
 }
 
-.mb-50 {
+.mb-50, .feature-icon-wrapper ~ p,
+.feature-icon-wrapper ~ div p {
   margin-bottom: 3.125rem;
 }
 
@@ -23081,50 +23082,59 @@ summary .accordion-button {
 /*
   Fix for gutter padding left & right - remove it.
   Gap will works for cards in Bootstrap 6 but not jet.
+
+@include media-breakpoint-down(sm) {
+    .cardgroup.row-cols-1>.col {
+        padding-left: 0;
+    }
+
+    .cardgroup.row-cols-1>.col {
+        padding-right: 0;
+    }
+}
+
+@include media-breakpoint-only(sm) {
+    .cardgroup.row-cols-sm-2>.col:nth-child(2n + 1) {
+        padding-left: 0;
+    }
+
+    .cardgroup.row-cols-sm-2>.col:nth-child(2n + 2) {
+        padding-right: 0;
+    }
+}
+
+@include media-breakpoint-between(md, lg) {
+    .cardgroup.row-cols-md-3>.col:nth-child(3n + 1) {
+        padding-left: 0;
+    }
+
+    .cardgroup.row-cols-md-3>.col:nth-child(3n + 3) {
+        padding-right: 0;
+    }
+}
+
+
+@include media-breakpoint-up(lg) {
+    .cardgroup.row-cols-lg-3>.col:nth-child(3n + 1),
+    .cardgroup.row-cols-lg-4>.col:nth-child(4n + 1),
+    .cardgroup.row-cols-lg-5>.col:nth-child(5n + 1) {
+        padding-left: 0;
+    }
+    .cardgroup.row-cols-lg-3>.col:nth-child(3n + 3),
+    .cardgroup.row-cols-lg-4>.col:nth-child(4n + 4),
+    .cardgroup.row-cols-lg-5>.col:nth-child(5n + 5) {
+        padding-right: 0;
+    }
+}
 */
-@media (max-width: 575.98px) {
-  .cardgroup.row-cols-1 > .col {
-    padding-left: 0;
-  }
-  .cardgroup.row-cols-1 > .col {
-    padding-right: 0;
-  }
-}
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .cardgroup.row-cols-sm-2 > .col:nth-child(2n+1) {
-    padding-left: 0;
-  }
-  .cardgroup.row-cols-sm-2 > .col:nth-child(2n+2) {
-    padding-right: 0;
-  }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .cardgroup.row-cols-md-3 > .col:nth-child(3n+1) {
-    padding-left: 0;
-  }
-  .cardgroup.row-cols-md-3 > .col:nth-child(3n+3) {
-    padding-right: 0;
-  }
-}
-@media (min-width: 992px) {
-  .cardgroup.row-cols-lg-3 > .col:nth-child(3n+1),
-  .cardgroup.row-cols-lg-4 > .col:nth-child(4n+1),
-  .cardgroup.row-cols-lg-5 > .col:nth-child(5n+1) {
-    padding-left: 0;
-  }
-  .cardgroup.row-cols-lg-3 > .col:nth-child(3n+3),
-  .cardgroup.row-cols-lg-4 > .col:nth-child(4n+4),
-  .cardgroup.row-cols-lg-5 > .col:nth-child(5n+5) {
-    padding-right: 0;
-  }
-}
+/*
 .col.project.hide {
   /* You can play with the seconds to change the "animation" */
-  animation: hide 0.1s ease 0s 1 normal forwards;
+/* animation: hide 0.1s ease 0s 1 normal forwards;
   transform-origin: center;
   display: none;
   margin: 0;
-  padding-left: 0;
+  padding-left:0;
 }
 
 @keyframes hide {
@@ -23141,12 +23151,113 @@ summary .accordion-button {
     margin: 0;
   }
 }
+
 .filter:hover {
   cursor: pointer;
 }
 
 .card-title {
-  font-size: clamp(1rem, 0.883rem + 0.391vw, 1.25rem);
+  font-size: clamp(1rem, calc(0.883rem + 0.391vw), 1.25rem);
+}*/
+.bi {
+  vertical-align: baseline;
+  fill: currentColor;
 }
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 0.75rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (min-width: 576px) {
+  .feature-icon-sm {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-icon-md {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .feature-icon-lg {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.bi.feature-icon-sm {
+  width: 3rem;
+  height: 3rem;
+}
+
+.bi.feature-icon-md {
+  width: 4rem;
+  height: 4rem;
+}
+@media (max-width: 991.98px) {
+  .bi.feature-icon-md {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.bi.feature-icon-lg {
+  width: 5rem;
+  height: 5rem;
+}
+@media (max-width: 991.98px) {
+  .bi.feature-icon-lg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.feature-icon-round {
+  border-radius: 50%;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-link > .bi {
+  margin-top: 0.125rem;
+  margin-left: 0.125rem;
+  transition: transform 0.25s ease-in-out;
+  fill: currentColor;
+}
+
+.icon-link:hover > .bi {
+  transform: translate(0.25rem);
+}
+
+.icon-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+@view-transition {
+  navigation: auto;
+  types: slide, forwards;
+}
+/* Documentation
+https://developer.chrome.com/docs/web-platform/view-transitions/cross-document?hl=de
+*/
 
 /*# sourceMappingURL=StyleSheet.css.map */

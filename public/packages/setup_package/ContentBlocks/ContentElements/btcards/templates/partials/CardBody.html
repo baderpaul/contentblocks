@@ -1,1 +1,4 @@
-<p class="card-text">{cardset.bodytextsimple -> f:format.nl2br() -> f:format.stripTags(allowedTags: "<b><strong><i>")}</p>
+<div class="card-text">
+    {cardset.bodytextsimple -> f:format.nl2br() -> f:format.stripTags(allowedTags: "<p>><b><strong><i>")}
+
+    </div>

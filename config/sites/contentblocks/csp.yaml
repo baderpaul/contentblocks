@@ -24,8 +24,8 @@ mutations:
   - mode: "extend"
     directive: "style-src-elem"
     sources:
-      - "'nonce-proxy'"
-      #- "'unsafe-eval'"
+      #- "'nonce-proxy'"
+      - "'unsafe-eval'"
 
   - mode: "extend"
     directive: "style-src-elem"

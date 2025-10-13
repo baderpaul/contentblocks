@@ -9,7 +9,6 @@ basics:
 group: ContentBlocks
 prefixFields: false
 fields:
-  - identifier: header
+  - identifier: backendheader
     label: Kurze Pluginbeschreibung für TYPO3 BE
     type: Text
-    useExistingField: true

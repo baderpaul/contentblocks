@@ -10,7 +10,7 @@ saveAndClose: true
 prefixFields: true
 prefixType: full
 fields:
-  - identifier: header
+  - identifier: backendheader
     label: Pluginbeschreibung für TYPO3 BE
     type: Text
   - identifier: tab_2

@@ -1,13 +1,13 @@
 <f:for each="{cardset.image}" as="image">
     <picture class="ratio ratio-1024x640">
         <source
-            srcset="{f:uri.image(image: image, maxWidth: '350', fileExtension:'webp', fileExtension:'webp', cropVariant: 'desktop')}"
+            srcset="{f:uri.image(image: image, maxWidth: '250', fileExtension:'webp', fileExtension:'webp', cropVariant: 'desktop')}"
             media="(min-width: 1200px)">
         <source
-            srcset="{f:uri.image(image: image, maxWidth: '250', fileExtension:'webp', cropVariant: 'desktop')}, {f:uri.image(image: image, fileExtension:'webp', maxWidth: '250', cropVariant: 'desktop')} 2x"
+            srcset="{f:uri.image(image: image, maxWidth: '300', fileExtension:'webp', cropVariant: 'desktop')}, {f:uri.image(image: image, fileExtension:'webp', maxWidth: '300', cropVariant: 'desktop')} 2x"
             media="(min-width: 992px)">
         <source
-            srcset="{f:uri.image(image: image, maxWidth: '350', fileExtension:'webp', cropVariant: 'tablet')}, {f:uri.image(image: image, fileExtension:'webp', maxWidth: '350', cropVariant: 'tablet')} 2x"
+            srcset="{f:uri.image(image: image, maxWidth: '400', fileExtension:'webp', cropVariant: 'tablet')}, {f:uri.image(image: image, fileExtension:'webp', maxWidth: '400', cropVariant: 'tablet')} 2x"
             media="(min-width: 577px)">
         <source
             srcset="{f:uri.image(image: image, maxWidth: '550', fileExtension:'webp', cropVariant: 'smartphone')}, {f:uri.image(image: image, fileExtension:'webp', maxWidth: '550', cropVariant: 'smartphone')} 2x"
