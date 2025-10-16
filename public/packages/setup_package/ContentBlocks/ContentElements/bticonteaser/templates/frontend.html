@@ -8,20 +8,22 @@
         {f:if(condition: '{data.responsive_lg}', then: '{data.responsive_lg}')}
         {f:if(condition: '{data.space_mobile}', then: '{data.space_mobile}')}
         {f:if(condition: '{data.space_tablet}', then: '{data.space_tablet}')}
-        {f:if(condition: '{data.space_desktop}', then: '{data.space_desktop}')} gy-40">
+        {f:if(condition: '{data.space_desktop}', then: '{data.space_desktop}')}
+        gy-40 {f:if(condition:i.isFirst, then: 'gt-0')} ">
             <f:for each="{data.collectionsets}" as="collectionset" iteration="i">
-                <div class="col  position-relative 
-                        border-bottom border-primary border-bottom-sm-0
-                        d-flex flex-column {data.teaseralignment}
+                <div class="col position-relative d-flex
+                        {f:if(condition: '{data.teasermodus}==one', then:' flex-column', else:'')} {data.teaseralignment} 
                         {f:if(condition:i.isLast, then: 'border-bottom-0')}">
-                    <f:if condition="{data.teasermodus}== one || three">
+                    <f:if condition="{data.teasermodus}">
                         <f:render partial="SvgItem" arguments="{_all}" />
-                        <f:render partial="TeaserContent" arguments="{_all}" />
-                    </f:if>
-                    
-                    <f:if condition="{data.teasermodus}==two">
-                        <f:render partial="TeaserContent" arguments="{_all}" />
-                        <f:render partial="SvgItem" arguments="{_all}" />
+                        <f:if condition="{data.teasermodus} == one">
+                            <f:then>
+                                <f:render partial="TeaserContent" section="IconTop" arguments="{_all}" />
+                            </f:then>
+                            <f:else>
+                                <f:render partial="TeaserContent" section="IconLeft" arguments="{_all}" />
+                            </f:else>
+                        </f:if>
                     </f:if>
                 </div>
             </f:for>

@@ -1,9 +1,29 @@
-<f:if condition="{collectionset.teaserheadline}">
-    <h3>
-        {collectionset.teaserheadline}
-    </h3>
-</f:if>
-<p>{collectionset.bodytextsimple -> f:format.stripTags()}</p>
-<f:if condition="{collectionset.url}">
-    <div class="{f:if(condition: '{data.ctabuttonsameheight}==1', then:' mt-auto')} pt-10 pb-30 py-md-20 "><f:render partial="TeaserLink" arguments="{_all}"/></div>
-</f:if>
+<f:section name="IconTop">
+    <f:if condition="{collectionset.teaserheadline}">
+        <h3>
+            {collectionset.teaserheadline}
+        </h3>
+    </f:if>
+    <p>{collectionset.bodytextsimple -> f:format.stripTags()}</p>
+    <f:if condition="{collectionset.url}">
+        <div class="{f:if(condition: '{data.ctabuttonsameheight}==1', then:'mt-auto')} pt-10 pb-30 py-md-20">
+            <f:render partial="TeaserLink" arguments="{_all}" />
+        </div>
+    </f:if>
+</f:section>
+
+<f:section name="IconLeft">
+    <div class="d-flex flex-column">
+        <f:if condition="{collectionset.teaserheadline}">
+            <h3>
+                {collectionset.teaserheadline}
+            </h3>
+        </f:if>
+        <p>{collectionset.bodytextsimple -> f:format.stripTags()}</p>
+        <f:if condition="{collectionset.url}">
+            <div class="{f:if(condition: '{data.ctabuttonsameheight}==1', then:'mt-auto')} pt-10 pb-30 py-md-20">
+                <f:render partial="TeaserLink" arguments="{_all}" />
+            </div>
+        </f:if>
+    </div>
+</f:section>
