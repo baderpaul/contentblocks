@@ -24,5 +24,5 @@
 * and defaults from TYPO3
 
 ## Tests with FileTypes
-## Tests with ReccordTypes
+## Tests with RecordTypes
 
