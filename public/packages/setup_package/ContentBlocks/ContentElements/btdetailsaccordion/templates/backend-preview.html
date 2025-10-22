@@ -1,4 +1,8 @@
-<f:comment><f:asset.css identifier="content-block-t3example-t3example/btaccordion-be" href="{cb:assetPath()}/preview.css" /></f:comment>
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
 <div class="mb-3">Vorhandene Accordionelemente mit Dialog & Summary</div>
 <div class="d-inline-flex flex-wrap" style="gap: 24px">
     <f:for each="{data.accordiondetailsset}" as="accordiondetailset" iteration="i">
@@ -15,4 +19,4 @@
             </f:for>            
         </div>
     </f:for>
-</div>
+</div></html>

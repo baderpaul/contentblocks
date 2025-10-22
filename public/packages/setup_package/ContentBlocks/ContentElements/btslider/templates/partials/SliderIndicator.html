@@ -1,3 +1,8 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
 <ol class="carousel-indicators
                     {f:if(condition: '{data.indicatorthumbnail}==1', then: ' position-relative')} p-0 m-0 d-none d-lg-flex">
     <f:for each="{data.slides}" as="slide" iteration="i">
@@ -10,7 +15,7 @@
             </li>                
         </f:for>    
     </f:for>              
-</ol>
+</ol></html>
 <f:comment>
 <f:if condition="{data.indicatorthumbnail}==1">
 <f:asset.css identifier="id-css-btslider-c{data.uid}" priority="true" useNonce="1">

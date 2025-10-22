@@ -1,4 +1,8 @@
-<div class="slogan position-absolute z-1 top-60 start-50 translate-middle d-flex flex-column text-center w-75 w-md-55">
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+><div class="slogan position-absolute z-1 top-60 start-50 translate-middle d-flex flex-column text-center w-75 w-md-55">
     <f:if condition="{slide.slogan_small}"><span class="d-block text-white text-center mb-15 fadeInDown d-none d-md-inline-block">{slide.slogan_small}</span></f:if>
     <f:if condition="{slide.slogan_big}"><span class="d-block text-white text-center fadeIn lh-sm lh-md-base">{slide.slogan_big}</span></f:if>  
     <f:if condition="{slide.slogan_cta}">
@@ -9,4 +13,4 @@
                 </f:for>
             </p>
     </f:if>
-</div>
+</div></html>

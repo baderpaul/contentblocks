@@ -1,4 +1,9 @@
-<div class="mb-3">Vorhandene Cards</div>
+
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+><div class="mb-3">Vorhandene Cards</div>
 <div class="d-inline-flex flex-wrap" style="gap: 24px">
     <f:for each="{data.cardsets}" as="cardset" iteration="i">
         <div class="d-inline-flex flex-column">
@@ -15,4 +20,4 @@
             </f:for>            
         </div>
     </f:for>
-</div>
+</div></html>

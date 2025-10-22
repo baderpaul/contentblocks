@@ -971,16 +971,16 @@
         },
         {
             "name": "friendsoftypo3/content-blocks",
-            "version": "1.3.16",
+            "version": "1.3.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfTYPO3/content-blocks.git",
-                "reference": "e6eb90f860d7d7ae051b6733159220847b95c836"
+                "reference": "32370bb3fa1c234e8999a9471361c97fe2129fac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfTYPO3/content-blocks/zipball/e6eb90f860d7d7ae051b6733159220847b95c836",
-                "reference": "e6eb90f860d7d7ae051b6733159220847b95c836",
+                "url": "https://api.github.com/repos/FriendsOfTYPO3/content-blocks/zipball/32370bb3fa1c234e8999a9471361c97fe2129fac",
+                "reference": "32370bb3fa1c234e8999a9471361c97fe2129fac",
                 "shasum": ""
             },
             "require": {
@@ -990,10 +990,10 @@
                 "symfony/finder": "^7.2",
                 "symfony/var-exporter": "^7.2",
                 "symfony/yaml": "^7.2",
-                "typo3/cms-backend": "^13.4.5",
-                "typo3/cms-core": "^13.4.5",
-                "typo3/cms-fluid": "^13.4.5",
-                "typo3/cms-frontend": "^13.4.5"
+                "typo3/cms-backend": "^13.4.19",
+                "typo3/cms-core": "^13.4.19",
+                "typo3/cms-fluid": "^13.4.19",
+                "typo3/cms-frontend": "^13.4.19"
             },
             "replace": {
                 "contentblocks/content-blocks": "*"
@@ -1005,14 +1005,14 @@
                 "friendsoftypo3/phpstan-typo3": "^0.9.0",
                 "phpstan/phpstan": "^1.10.22",
                 "phpstan/phpstan-phpunit": "^1.3.13",
-                "typo3/cms-extbase": "^13.4.5",
-                "typo3/cms-extensionmanager": "^13.4.5",
-                "typo3/cms-filelist": "^13.4.5",
-                "typo3/cms-install": "^13.4.5",
-                "typo3/cms-lowlevel": "^13.4.5",
-                "typo3/cms-rte-ckeditor": "^13.4.5",
-                "typo3/cms-tstemplate": "^13.4.5",
-                "typo3/cms-workspaces": "^13.4.5",
+                "typo3/cms-extbase": "^13.4.19",
+                "typo3/cms-extensionmanager": "^13.4.19",
+                "typo3/cms-filelist": "^13.4.19",
+                "typo3/cms-install": "^13.4.19",
+                "typo3/cms-lowlevel": "^13.4.19",
+                "typo3/cms-rte-ckeditor": "^13.4.19",
+                "typo3/cms-tstemplate": "^13.4.19",
+                "typo3/cms-workspaces": "^13.4.19",
                 "typo3/coding-standards": "^0.8",
                 "typo3/testing-framework": "^9"
             },
@@ -1050,7 +1050,7 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2025-10-01T15:21:49+00:00"
+            "time": "2025-10-21T13:47:46+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -7308,28 +7308,28 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991"
+                "reference": "541057574806f942c94662b817a50f63f7345360"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/11cb2199493b2f8a3b53e7f19068fc6aac760991",
-                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/541057574806f942c94662b817a50f63f7345360",
+                "reference": "541057574806f942c94662b817a50f63f7345360",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
+                "ext-date": "*",
+                "ext-filter": "*",
                 "php": "^7.2 || ^8.0"
             },
-            "conflict": {
-                "phpstan/phpstan": "<0.12.20",
-                "vimeo/psalm": "<4.6.1 || 4.6.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5.13"
+            "suggest": {
+                "ext-intl": "",
+                "ext-simplexml": "",
+                "ext-spl": ""
             },
             "type": "library",
             "extra": {
@@ -7360,9 +7360,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/1.11.0"
+                "source": "https://github.com/webmozarts/assert/tree/1.12.0"
             },
-            "time": "2022-06-03T18:03:27+00:00"
+            "time": "2025-10-20T12:43:39+00:00"
         }
     ],
     "packages-dev": [],

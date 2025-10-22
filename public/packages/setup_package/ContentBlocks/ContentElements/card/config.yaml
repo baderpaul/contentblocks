@@ -3,6 +3,7 @@ table: tx_contentblocks_card
 title: Einzelne Card für Cardgroup
 prefixFields: false
 prefixType: full
+group: ContentBlocksHelper
 security:
   ignorePageTypeRestriction: true
 fields:

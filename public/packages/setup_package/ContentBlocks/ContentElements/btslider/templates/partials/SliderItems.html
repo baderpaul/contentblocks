@@ -1,4 +1,8 @@
-<f:for each="{data.slides}" as="slide" iteration="indicator-2">
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+><f:for each="{data.slides}" as="slide" iteration="indicator-2">
 
     <f:for each="{slide.image}" as="image">
         <div class="carousel-item {f:if(condition:'{indicator-2.isFirst}',then:' active')}">
@@ -12,4 +16,4 @@
             </f:if>
         </div>
     </f:for>
-</f:for>
+</f:for></html>

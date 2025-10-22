@@ -1,3 +1,8 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
 <f:for each="{cardset.image}" as="image">
     <picture class="ratio ratio-1024x640">
         <source
@@ -17,4 +22,4 @@
             src="{f:uri.image(image: image, maxWidth: settings.maxImgWidth, cropVariant: 'default', fileExtension:'webp')}"
             alt="{image.alternative}" title="{image.title}" loading="lazy">
     </picture>
-</f:for>
+</f:for></html>

@@ -1,0 +1,7 @@
+name: contentblocks/example-page-type
+label: contentblocks/example-page-type
+description: 'Test example page type for ContentBlocks'
+typeName: 942
+fields:
+  - identifier: additional_field
+    type: Text

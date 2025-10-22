@@ -1,7 +1,12 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
 <f:link.typolink parameter="{collectionset.url}"
         additionalAttributes="{role: 'button'}"
         class="btn btn-outline-primary
         {f:if(condition: '{data.ctabuttonsameheight}==1', then:' mt-auto')}
         {f:if(condition: '{collectionset.linkcard}', then: 'stretched-link')}">    
     {collectionset.cta}
-</f:link.typolink>
+</f:link.typolink></html>

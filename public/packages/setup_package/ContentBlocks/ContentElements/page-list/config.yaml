@@ -1,0 +1,18 @@
+name: contentblocks/page-list
+typeName: contentblocks_page_list
+group: default
+prefixFields: false
+fields:
+  -
+    identifier: header
+    useExistingField: true
+    required: true
+  -
+    identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+  -
+    identifier: tx_setup_package_page
+    type: Relation
+    minitems: 1
+    allowed: pages
