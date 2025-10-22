@@ -1,0 +1,32 @@
+name: contentblocks/cta
+table: tx_contentblocks_cta
+title: Einzelner Link
+prefixFields: false
+prefixType: full
+group: ContentBlocksHelper
+security:
+  ignorePageTypeRestriction: true
+fields:
+  - identifier: tab_1
+    type: Tab
+  - identifier: cta
+    label: Linktext
+    type: Text
+    placeholder: Call to Action Text
+  - identifier: url
+    label: Linkziel
+    type: Link
+    autocomplete: true
+    allowedTypes:
+      - page
+      - url
+      - file
+  - identifier: linklabel
+    label: Nur Linklabel verlinken
+    type: Checkbox
+    renderType: checkboxLabeledToggle
+    items:
+  - label: 'Auswählen'
+    labelChecked: 'Label ist verlinkt'
+    labelUnchecked: 'Label ist nicht verlinkt'
+    invertStateDisplay: false
