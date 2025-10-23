@@ -1,0 +1,9 @@
+name: contentblocks/bthero
+typeName: contentblocks_bthero
+group: default
+prefixFields: true
+prefixType: full
+fields:
+  -
+    identifier: header
+    useExistingField: true

@@ -3,6 +3,7 @@
     "type": "typo3-cms-extension",
     "description": "Pagesetup with all stuff",
     "version": "1.0.0",
+    "license": "MIT",
     "extra": {
       "typo3/cms": {
         "extension-key": "setup_package"
