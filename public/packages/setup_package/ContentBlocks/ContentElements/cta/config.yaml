@@ -26,7 +26,7 @@ fields:
     type: Checkbox
     renderType: checkboxLabeledToggle
     items:
-  - label: 'Auswählen'
-    labelChecked: 'Label ist verlinkt'
-    labelUnchecked: 'Label ist nicht verlinkt'
-    invertStateDisplay: false
+      - label: 'Auswählen'
+        labelChecked: 'Label ist verlinkt'
+        labelUnchecked: 'Label ist nicht verlinkt'
+        invertStateDisplay: false

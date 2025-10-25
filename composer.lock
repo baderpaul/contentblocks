@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7228212d2d41b95a334632a46cae1ac",
+    "content-hash": "9399aee5eff0f4731b8d29e4471a670f",
     "packages": [
         {
             "name": "apen/additional_reports",
@@ -257,7 +257,7 @@
             "dist": {
                 "type": "path",
                 "url": "public/packages/setup_package",
-                "reference": "fac768aec3de430f51c534b79484a9cdf6611b67"
+                "reference": "f74541f71b9242c5c8ef487b21f79834d4ebada1"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -270,6 +270,9 @@
                     "Contentblocks\\SetupPackage\\": "Classes/"
                 }
             },
+            "license": [
+                "MIT"
+            ],
             "description": "Pagesetup with all stuff",
             "transport-options": {
                 "relative": true
@@ -5262,6 +5265,47 @@
                 }
             ],
             "time": "2025-08-27T11:34:33+00:00"
+        },
+        {
+            "name": "t3-ux/content_preview",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/T3-UX/content_preview.git",
+                "reference": "fd6dba95ae7811498c12340a798214cd9c9b4072"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/T3-UX/content_preview/zipball/fd6dba95ae7811498c12340a798214cd9c9b4072",
+                "reference": "fd6dba95ae7811498c12340a798214cd9c9b4072",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^12.4 || ^13.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "app-dir": ".Build",
+                    "web-dir": ".Build/public",
+                    "extension-key": "content_preview"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "T3UX\\ContentPreview\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Preview your content in page module and boost your CMS experience.",
+            "support": {
+                "issues": "https://github.com/T3-UX/content_preview/issues",
+                "source": "https://github.com/T3-UX/content_preview/tree/v1.0.1"
+            },
+            "time": "2025-10-16T22:16:35+00:00"
         },
         {
             "name": "typo3/class-alias-loader",
