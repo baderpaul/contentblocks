@@ -4,7 +4,6 @@
     data-namespace-typo3-fluid="true"
 >
 <h1>{data.header}</h1>
-<f:debug>{_all}</f:debug>
 <f:for each="{listView}" as="item">
     <f:link.page pageUid="{data.detail_page_select.uid}" additionalParams="{tx_example_plugin: {record: item.data.uid}}">
         <h2>{item.data.title}</h2>

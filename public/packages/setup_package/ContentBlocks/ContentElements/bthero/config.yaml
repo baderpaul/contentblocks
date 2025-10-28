@@ -1,9 +1,17 @@
 name: contentblocks/bthero
 typeName: contentblocks_bthero
-group: default
-prefixFields: true
-prefixType: full
+group: ContentBlocks
+saveAndClose: true
+prefixFields: false
 fields:
-  -
-    identifier: header
-    useExistingField: true
+  - identifier: backendheader
+    type: Text
+    placeholder: Pluginbeschreibung für TYPO3 BE
+  - identifier: hero
+    type: Tab
+    label: Hero anlegen
+  - identifier: bgimage
+    label: Hintergrundbild auswählen
+    type: File
+    allowed: common-image-types
+    maxitems: 1
