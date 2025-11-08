@@ -1,17 +1,27 @@
 .glass {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    @include media-breakpoint-down(md) { 
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transform: translate(0, -25px);
-        width: 100%;
-    }
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  @include media-breakpoint-down(md) {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, -25px);
+    width: 100%;
+  }
 }
 
 .text-glass {
-    white-space: pre-line;
-    text-shadow: 1px -1px 0 #000;
+  white-space: pre-line;
+  text-shadow: 1px -1px 0 #000;
+}
+.background-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-hero-glass {
+  backdrop-filter: blur(6px) saturate(102%);
+  -webkit-backdrop-filter: blur(6px) saturate(102%);
 }

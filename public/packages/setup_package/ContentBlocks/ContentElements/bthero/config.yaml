@@ -15,3 +15,18 @@ fields:
     type: File
     allowed: common-image-types
     maxitems: 1
+  - identifier: headline
+    type: Text
+    label: Überschrift
+  - identifier: herotext
+    type: Textarea
+    default: Beschreibungstext
+    label: Herotext
+    rows: 5
+  - identifier: buttons
+    label: Call to Action Link (Buttons) anlegen
+    type: Collection
+    maxitems: 2
+    foreign_table: tt_content
+    allowedRecordTypes:
+      - contentblocks_cta  

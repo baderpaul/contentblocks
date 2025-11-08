@@ -4,7 +4,7 @@
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>contentblocks/file-type-image</source>
+				<source>contentblocks/image</source>
 			</trans-unit>
 			<trans-unit id="contentblocks_custom_field.label">
 				<source>Test Filetype Field</source>

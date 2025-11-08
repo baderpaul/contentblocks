@@ -53,8 +53,8 @@ mutations:
     sources:
       - "'nonce-proxy'"
 
-  - mode: "reduce"
-    directive: "style-src-attr"
-    sources:
-      - "'unsafe-inline'"
+ # - mode: "reduce"
+ #   directive: "style-src-attr"
+ #   sources:
+ #     - "'unsafe-inline'"
 

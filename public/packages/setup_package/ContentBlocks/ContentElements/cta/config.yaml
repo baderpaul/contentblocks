@@ -1,14 +1,12 @@
 name: contentblocks/cta
 table: tx_contentblocks_cta
 title: Einzelner Link
-prefixFields: false
+prefixFields: true
 prefixType: full
 group: ContentBlocksHelper
 security:
   ignorePageTypeRestriction: true
 fields:
-  - identifier: tab_1
-    type: Tab
   - identifier: cta
     label: Linktext
     type: Text
@@ -28,5 +26,5 @@ fields:
     items:
       - label: 'Auswählen'
         labelChecked: 'Label ist verlinkt'
-        labelUnchecked: 'Label ist nicht verlinkt'
+        labelUnchecked: 'Ganzer Teaser ist verlinkt'
         invertStateDisplay: false

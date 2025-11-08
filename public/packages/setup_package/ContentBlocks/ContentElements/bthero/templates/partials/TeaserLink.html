@@ -1,0 +1,10 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:link.typolink parameter="{button.contentblocks_cta_url}"
+        additionalAttributes="{role: 'button'}"
+        class="btn btn-primary btn-lg {f:if(condition: '{button.contentblocks_cta_linklabel} == 0 && {countbuttons} < 2', then: 'stretched-link')}">
+    {button.contentblocks_cta_cta}
+</f:link.typolink></html>
