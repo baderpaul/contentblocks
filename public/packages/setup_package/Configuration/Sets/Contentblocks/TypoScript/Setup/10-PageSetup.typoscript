@@ -1,6 +1,6 @@
 page = PAGE
 page.shortcutIcon = EXT:{$extKey}/Resources/Public/Favicon/favicon.ico
-page.bodyTagAdd = class="d-flex flex-column mb-1 p-0 h-100"
+page.bodyTagAdd = class="d-flex flex-column mb-1 p-0 vh-100"
 page {
     10 = PAGEVIEW
     10 {
@@ -38,5 +38,9 @@ page {
             #parentPageTitle.data = levelfield:-1:title
 
         }
+         dataProcessing {
+           10 = page-content
+           20 = content-blocks
+         }
     }
 }

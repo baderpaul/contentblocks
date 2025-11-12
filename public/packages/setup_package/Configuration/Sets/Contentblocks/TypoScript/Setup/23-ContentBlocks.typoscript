@@ -6,3 +6,36 @@ lib.contentBlock {
     layoutRootPaths.0 < lib.contentElement.layoutRootPaths.0
     layoutRootPaths.10 = EXT:setup_package/Resources/Private/Templates/FluidStyledContent/Layouts/
 }
+/*
+tt_content {
+  example_plugin_list {
+    dataProcessing {
+      100 = database-query
+      100 {
+        table = tx_contentblocks_notype
+        orderBy = title ASC
+        pidInList.field = page_select
+        as = listView
+        dataProcessing {
+          10 = content-blocks
+        }
+      }
+    }
+  }
+  example_plugin_detail {
+    dataProcessing {
+      100 = database-query
+      100 {
+        if.isTrue.data = GP:tx_example_plugin|record
+        table = tx_hov_domain_model_notype
+        pidInList.field = page_select
+        uidInList.data = GP:tx_example_plugin|record
+        as = detailView
+        dataProcessing {
+          10 = content-blocks
+        }
+      }
+    }
+  }
+}
+*/

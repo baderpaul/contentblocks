@@ -1,4 +1,4 @@
-name: hov/record2
+name: contentblocksv/record2
 table: tx_contentblocks_record1
 prefixFields: false
 typeName: record2
