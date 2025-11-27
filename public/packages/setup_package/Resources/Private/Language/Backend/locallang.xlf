@@ -64,6 +64,10 @@
             <source>Bereich für CE Menu - OnePageMenu wählen</source>
             </trans-unit>
 
+            <trans-unit id="tt_content.linkToNextElement">
+            <source>Link zum nächsten Contentelement anzeigen.</source>
+            </trans-unit>
+            
         <!-- **************************************
                         be layout names
         ************************************** -->

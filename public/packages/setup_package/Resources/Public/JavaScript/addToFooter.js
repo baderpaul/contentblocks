@@ -206,3 +206,68 @@ document.querySelectorAll(".accordion-item").forEach((i) => {
 //document.querySelector(".card-news").ontouchstart = function (e) {
 //    document.querySelector(".card-news .news-overlay").classList.toggle("news-overlay-touch");
 //}
+
+// Next Section Link on Contentelements & Contentblocks
+
+ const sections = document.querySelectorAll('.scroll-section');
+
+// Funktion zum Scrollen zur nächsten Sektion
+function nextSection() {
+  console.log("Next Button Clicked!");
+    scrollToDirection(1);
+}
+
+// Funktion zum Scrollen zur vorherigen Sektion
+function prevSection() {
+    scrollToDirection(-1);
+}
+
+function scrollToDirection(direction) {
+    let currentSectionIndex = 0;
+
+    // Finde den Index der Sektion, die aktuell am nächsten zur Oberkante ist
+    for (let i = 0; i < sections.length; i++) {
+        // Mithilfe von getBoundingClientRect() prüfen wir, wie nah die Sektion am oberen Rand ist
+        const rect = sections[i].getBoundingClientRect();
+        // Wenn die Sektion (oder ein Teil davon) im Viewport ist
+        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+             currentSectionIndex = i;
+             break; // Wir nehmen die erste sichtbare Sektion von oben
+        }
+    }
+
+    // Berechne den Index der Zielsektion
+    const targetIndex = currentSectionIndex + direction;
+
+    console.log("Aktueller Index gefunden:", currentSectionIndex);
+    console.log("Ziel Index:", targetIndex);
+
+    // Prüfe, ob die Zielsektion existiert (nicht außerhalb des Bereichs liegt)
+    if (targetIndex >= 0 && targetIndex < sections.length) {
+        sections[targetIndex].scrollIntoView({
+            behavior: 'smooth',
+            block: 'start' // Sorgt dafür, dass die Sektion oben im Viewport startet
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Hole ALLE Elemente mit der Klasse 'section-nav-next'
+    const nextButtons = document.querySelectorAll('.section-nav-next');
+
+    // 2. Iteriere über die NodeList (die Liste der gefundenen Buttons)
+    nextButtons.forEach(button => {
+        // Hänge für JEDEN gefundenen Button den nextSection Event-Listener an
+        button.addEventListener('click', nextSection);
+    });
+
+    // 3. Hole ALLE Elemente mit der Klasse 'section-nav-prev'
+    const prevButtons = document.querySelectorAll('.section-nav-prev');
+
+    // 4. Iteriere und hänge den prevSection Event-Listener an
+    prevButtons.forEach(button => {
+        button.addEventListener('click', prevSection);
+    });
+
+});

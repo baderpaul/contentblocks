@@ -12,6 +12,31 @@ $locallangBackendFile = '/Resources/Private/Language/Backend/locallang.xlf';
 // Set tt_content sectionIndex to 0
 $GLOBALS['TCA']['tt_content']['columns']['sectionIndex']['config']['default'] = 0;
 
+// Add Link to Next Contentelement
+$tempColumns = [
+    'linkToNextElement' => [
+        'exclude' => true,
+        'label' => 'LLL:' . $packageKey . '' . $locallangBackendFile . ':tt_content.linkToNextElement',
+        'config' => [
+              'type' => 'check',
+              'renderType' => 'checkboxToggle',
+
+           ],
+    ],
+];
+
+ExtensionManagementUtility::addTCAcolumns(
+  'tt_content', 
+  $tempColumns
+);
+
+ExtensionManagementUtility::addFieldsToPalette(
+  'tt_content', 
+  'appearanceLinks',
+  'linkToNextElement', 
+  'after:linkToTop'
+);
+
 // Containers
 
 GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(

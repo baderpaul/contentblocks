@@ -15,4 +15,8 @@ fields:
       -
         identifier: linkToTop
         useExistingField: true
+      -
+        identifier: linkToNextElement
+        type: Checkbox
+        useExistingField: true
       - type: Linebreak 
