@@ -1,5 +1,5 @@
 config {
-    no_cache = 1
+    no_cache = 0
     admPanel = 1
     debug = 1
     #frontend_editing = 0
@@ -11,10 +11,10 @@ config {
     removeDefaultCss = 1
     inlineStyle2TempFile = 0
     moveJsFromHeaderToFooter = 0
-    concatenateCss = 1
-    concatenateJs = 0
-    compressCss = 1
-    compressJs = 0
+    #concatenateCss = 1
+    #concatenateJs = 0
+    #compressCss = 1
+    #compressJs = 0
 
     disablePreviewNotification = 1
     disablePrefixComment = 1
@@ -24,6 +24,8 @@ config {
     domainTarget = _top
     intTarget = _self
     extTarget = _blank
+    image.width =
+    image.height =
 
     spamProtectEmailAddresses = -2
     spamProtectEmailAddresses_lastDotSubst = (at)
@@ -47,10 +49,11 @@ config {
 
 [applicationContext matches "/^Development/"]
     config {
-        compressCss = 0
-        compressJs = 0
-        concatenateJs = 0
-        concatenateCss = 0
+      no_cache = 1
+#        compressCss = 0
+#        compressJs = 0
+##        concatenateJs = 0
+#        concatenateCss = 0
     }
 [end]
 
